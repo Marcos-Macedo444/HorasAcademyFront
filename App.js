@@ -21,7 +21,7 @@ export default function App() {
         <Stack.Screen
           name="Cadastro"
           component={CadastroScreen}
-          options={{ title: 'Cadastro' }}
+          options={{ title: 'Cadastro', headerShown: false }}
         />
         <Stack.Screen
           name="Home"
@@ -31,7 +31,8 @@ export default function App() {
         <Stack.Screen
           name="Events"
           component={EventsScreen}
-          options={{ title: 'Eventos' }}
+          // options={{ title: 'Eventos' }}
+          options={{ headerShown: false, title: 'Eventos' }} // Adicione esta linha
         />
         <Stack.Screen
           name="EventDetail"
