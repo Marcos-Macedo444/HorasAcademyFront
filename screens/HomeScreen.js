@@ -11,7 +11,11 @@ export default function HomeScreen({ navigation }) {
     <View style={styles.container}>
       {/* Exibe o menu caso esteja visível */}
       {menuVisible && (
-        <MenuHamburger navigation={navigation} isVisible={menuVisible} onClose={() => setMenuVisible(false)} />
+        <MenuHamburger 
+          navigation={navigation} 
+          isVisible={menuVisible} 
+          onClose={() => setMenuVisible(false)} 
+        />
       )}
 
       {/* Botão do menu hamburger, escondido quando o menu está visível */}
