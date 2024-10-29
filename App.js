@@ -5,7 +5,8 @@ import CadastroScreen from './screens/CadastroScreen';
 import LoginScreen from './screens/LoginScreen';
 import HomeScreen from './screens/HomeScreen';
 import EventsScreen from './screens/Events';
-import EventDetailScreen from './screens/EventDetailScreen'; // Adicione esta linha
+import EventDetailScreen from './screens/EventDetailScreen'; 
+import ContactUsScreen from './screens/ContactUsScreen'; 
 
 const Stack = createStackNavigator();
 
@@ -31,13 +32,17 @@ export default function App() {
         <Stack.Screen
           name="Events"
           component={EventsScreen}
-          // options={{ title: 'Eventos' }}
-          options={{ headerShown: false, title: 'Eventos' }} // Adicione esta linha
+          options={{ headerShown: false, title: 'Eventos' }}
         />
         <Stack.Screen
           name="EventDetail"
-          component={EventDetailScreen} // Adicionando a tela de detalhes do evento
+          component={EventDetailScreen} 
           options={{ title: 'Detalhes do Evento' }}
+        />
+        <Stack.Screen
+          name="ContactUsScreen"
+          component={ContactUsScreen} // Adiciona a tela de contato
+          options={{ title: 'Contato', headerShown: false }} 
         />
       </Stack.Navigator>
     </NavigationContainer>
