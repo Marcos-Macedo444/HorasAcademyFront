@@ -28,19 +28,17 @@ export default function HomeScreen({ navigation }) {
       <Text style={styles.pageTitle}>Olá, Fulano</Text>
       <Image source={logo} style={styles.logo} />
 
-      {/* Botões de navegação */}
-      <View style={styles.buttonContainer}>
-        <View style={styles.whiteBackground}>
-          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Events')}>
-            <Text style={styles.buttonText}>Eventos</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText}>Certificados</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText}>Horas</Text>
-          </TouchableOpacity>
-        </View>
+      {/* Card estilizado com os botões dentro */}
+      <View style={styles.card}>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Events')}>
+          <Text style={styles.buttonText}>Eventos</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Certificados</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Horas</Text>
+        </TouchableOpacity>
       </View>
 
       {/* Botão Voltar */}
@@ -62,10 +60,9 @@ const styles = StyleSheet.create({
   pageTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    marginBottom: 20,
     color: '#000',
     alignSelf: 'flex-end', // Alinha o texto à direita
-    marginTop: 20, // Aumenta a distância do título para o topo da tela
+    marginTop: -20, // Aumenta a distância do título para o topo da tela
   },
   logo: {
     width: 240, // Dobra a largura da imagem
@@ -73,21 +70,17 @@ const styles = StyleSheet.create({
     marginBottom: 50, // Aumenta a distância da logo para o conteúdo
     resizeMode: 'contain',
   },
-  buttonContainer: {
-    width: '100%',
-    marginBottom: 20,
+  card: {
+    width: '100%', // Aumenta a largura do card
+    height: '28%',
+    padding: 30,
+    borderRadius: 10,
+    backgroundColor: 'rgba(255, 255, 255, 0.75)', // Fundo branco transparente
+    elevation: 5,
     alignItems: 'center',
-  },
-  whiteBackground: {
-    backgroundColor: '#fff', // Fundo branco
-    paddingVertical: 10,
-    paddingHorizontal: 30,
-    borderRadius: 8,
-    marginVertical: 8,
-    width: '80%',
-    alignItems: 'center',
-    borderWidth: 2, // Aumenta a espessura da borda
-    borderColor: '#86aaf0', // Cor da borda
+    marginTop: 10, // Adiciona espaço embaixo da logo
+    borderWidth: 2,
+    borderColor: '#86aaf0', // Cor da borda do card
   },
   button: {
     backgroundColor: '#86aaf0', // Fundo azul
@@ -111,7 +104,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     borderWidth: 1,
     borderColor: 'black',
-    marginTop: 40, // Ajusta a distância do botão "Voltar" para os outros elementos
+    marginTop: 50, // Ajusta a distância do botão "Voltar" para os outros elementos
   },
   backButtonText: {
     fontSize: 18,
