@@ -1,7 +1,3 @@
-# HorasAcademy
-Aqui está um exemplo de um arquivo `README.md` para o seu aplicativo. Você pode ajustar as seções conforme necessário:
-
-```markdown
 # Horas Academy
 
 ## Descrição
@@ -24,12 +20,24 @@ Horas Academy é um aplicativo desenvolvido para ajudar usuários a gerenciar su
 ## Estrutura do Projeto
 
 ```plaintext
-horas_academyFront-master/
-├── assets/                # Imagens e outros recursos
-├── node_modules/         # Dependências do projeto
-├── App.js                # Ponto de entrada do aplicativo
-├── package.json          # Dependências e scripts do projeto
-└── ...
+HorasAcademyFront/
+├── api/                    # Contém as chamadas à API
+├── assets/                 # Imagens e outros recursos
+├── screens/                # Contém as telas da aplicação
+│   ├── CadastroScreen.js
+│   ├── ContactUsScreen.js
+│   ├── EventDetailScreen.js
+│   ├── Events.js
+│   ├── HomeScreen.js
+│   └── LoginScreen.js
+├── src/
+│   └── components/         # Contém os componentes reutilizáveis
+│       ├── MenuHamburguer.js
+│       └── UserList.js
+├── .gitignore              # Ignora arquivos e pastas no Git
+├── App.js                  # Ponto de entrada do aplicativo
+└── README.md               # Documentação do projeto
+...
 ```
 
 ## Instalação
@@ -41,7 +49,7 @@ horas_academyFront-master/
 
 2. Navegue até a pasta do projeto:
    ```bash
-   cd horas_academyFront-master
+   cd HorasAcademyFront
    ```
 
 3. Instale as dependências:
@@ -62,10 +70,3 @@ Contribuições são bem-vindas! Se você tiver sugestões, correções ou melho
 
 Este projeto é licenciado sob a MIT License - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 ```
-
-### Instruções para Uso
-1. Substitua `<URL do repositório>` pela URL real do seu repositório no GitHub ou em outra plataforma.
-2. Adicione seções adicionais, como instruções específicas sobre o uso do aplicativo, screenshots, ou informações de contato, se desejar.
-3. Se houver um arquivo de licença, inclua as informações relevantes.
-
-Sinta-se à vontade para modificar qualquer parte conforme necessário! Se precisar de mais ajuda, é só avisar.
