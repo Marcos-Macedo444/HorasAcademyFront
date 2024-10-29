@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
   },
   logo: {
     width: '48%',
-    height: 166,
+    height: 178,
     borderRadius: 20,
   },
   themesText: {
