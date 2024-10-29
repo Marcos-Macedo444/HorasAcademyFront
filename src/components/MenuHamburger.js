@@ -30,7 +30,7 @@ const MenuHamburger = ({ navigation, isVisible, onClose }) => {
         <TouchableOpacity style={styles.button} onPress={() => { onClose(); navigation.navigate('Events'); }}>
           <Text style={styles.buttonText}>Agenda</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={() => { onClose(); alert('Ajuda'); }}>
+        <TouchableOpacity style={styles.button} onPress={() => { onClose(); navigation.navigate('ContactUsScreen'); }}>
           <Text style={styles.buttonText}>Ajuda</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => { onClose(); navigation.navigate('Login'); }}>
@@ -82,8 +82,3 @@ const styles = StyleSheet.create({
 });
 
 export default MenuHamburger;
-
-
-
-
-
