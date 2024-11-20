@@ -104,7 +104,7 @@ export default function ContactUsScreen() {
             </TouchableOpacity>
           </View>
         </View>
-      </ScrollView>
+      </ScrollView> 
     </SafeAreaView>
   );
 }

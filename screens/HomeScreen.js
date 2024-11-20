@@ -11,10 +11,10 @@ export default function HomeScreen({ navigation }) {
     <View style={styles.container}>
       {/* Exibe o menu caso esteja visível */}
       {menuVisible && (
-        <MenuHamburger 
-          navigation={navigation} 
-          isVisible={menuVisible} 
-          onClose={() => setMenuVisible(false)} 
+        <MenuHamburger
+          navigation={navigation}
+          isVisible={menuVisible}
+          onClose={() => setMenuVisible(false)}
         />
       )}
 
@@ -36,7 +36,7 @@ export default function HomeScreen({ navigation }) {
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Certificados</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Horas')}>
           <Text style={styles.buttonText}>Horas</Text>
         </TouchableOpacity>
       </View>

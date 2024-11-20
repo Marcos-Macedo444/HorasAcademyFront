@@ -6,7 +6,8 @@ import LoginScreen from './screens/LoginScreen';
 import HomeScreen from './screens/HomeScreen';
 import EventsScreen from './screens/Events';
 import EventDetailScreen from './screens/EventDetailScreen'; 
-import ContactUsScreen from './screens/ContactUsScreen'; 
+import ContactUsScreen from './screens/ContactUsScreen';
+import HorasScreen from './screens/HorasScreen'; // Import da tela HorasScreen
 
 const Stack = createStackNavigator();
 
@@ -41,8 +42,13 @@ export default function App() {
         />
         <Stack.Screen
           name="ContactUsScreen"
-          component={ContactUsScreen} // Adiciona a tela de contato
+          component={ContactUsScreen} // Tela de contato
           options={{ title: 'Contato', headerShown: false }} 
+        />
+        <Stack.Screen
+          name="Horas" // Adiciona a tela HorasScreen
+          component={HorasScreen}
+          options={{ headerShown: false, title: 'Horas Complementares' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
