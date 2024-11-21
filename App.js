@@ -8,6 +8,8 @@ import EventsScreen from './screens/Events';
 import EventDetailScreen from './screens/EventDetailScreen'; 
 import ContactUsScreen from './screens/ContactUsScreen';
 import HorasScreen from './screens/HorasScreen'; // Import da tela HorasScreen
+import CertificadosScreen from './screens/CertificadosScreen'; // Import da tela CertificadosScreen
+import CertificadoDetailScreen from './screens/CertificadoDetailScreen'; // Import da tela CertificadoDetailsScreen
 
 const Stack = createStackNavigator();
 
@@ -49,6 +51,16 @@ export default function App() {
           name="Horas" // Adiciona a tela HorasScreen
           component={HorasScreen}
           options={{ headerShown: false, title: 'Horas Complementares' }}
+        />
+        <Stack.Screen
+          name="Certificados" 
+          component={CertificadosScreen}
+          options={{ headerShown: false, title: 'Certificados' }}
+        />
+        <Stack.Screen
+          name="Certificado" 
+          component={CertificadoDetailScreen}
+          options={{ headerShown: false, title: 'Certificado' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
