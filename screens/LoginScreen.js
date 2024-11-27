@@ -10,10 +10,15 @@ const LoginScreen = ({ navigation }) => {
     try {
       const usuarioArmazenado = await AsyncStorage.getItem('usuario');
       const usuarioJson = usuarioArmazenado ? JSON.parse(usuarioArmazenado) : null;
-
+  
       if (usuarioJson && usuarioJson.email === usuario && usuarioJson.senha === senha) {
         console.log('Login bem-sucedido');
-        navigation.navigate('Home'); // Redireciona para a tela Home após o login bem-sucedido
+  
+        if (usuarioJson.isAdmin) {
+          navigation.navigate('AdminScreen'); // Redireciona para a tela de administrador
+        } else {
+          navigation.navigate('Home'); // Redireciona para a tela de usuário normal
+        }
       } else {
         alert('Usuário ou senha incorretos');
       }
@@ -22,6 +27,7 @@ const LoginScreen = ({ navigation }) => {
       alert('Erro ao fazer login. Tente novamente.');
     }
   };
+  
 
   return (
     <View style={styles.container}>
@@ -58,6 +64,10 @@ const LoginScreen = ({ navigation }) => {
           onPress={handleLogin}
         >
           <Text style={styles.loginText}>LOGIN</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={() => navigation.navigate('Admin')}>
+          <Text style={styles.signUpText}>LOGIN ADMIN</Text>
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => navigation.navigate('Cadastro')}>

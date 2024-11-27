@@ -12,7 +12,7 @@ const imageUrl = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1q7ccQt
 export default function CertificadoDetailScreen() {
   const navigation = useNavigation();
   const route = useRoute();
-  const { event } = route.params; // Obtendo os dados do evento da navegação
+  const { event } = route.params; // Obtendo os dados do evento da navegaçãoa
   const [menuVisible, setMenuVisible] = useState(false);
 
   // Desativando o cabeçalho na navegação

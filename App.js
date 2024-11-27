@@ -10,6 +10,7 @@ import ContactUsScreen from './screens/ContactUsScreen';
 import HorasScreen from './screens/HorasScreen'; // Import da tela HorasScreen
 import CertificadosScreen from './screens/CertificadosScreen'; // Import da tela CertificadosScreen
 import CertificadoDetailScreen from './screens/CertificadoDetailScreen'; // Import da tela CertificadoDetailsScreen
+import AdminScreen from './screens/AdminScreen';
 
 const Stack = createStackNavigator();
 
@@ -61,6 +62,11 @@ export default function App() {
           name="Certificado" 
           component={CertificadoDetailScreen}
           options={{ headerShown: false, title: 'Certificado' }}
+        />
+        <Stack.Screen
+          name="Admin" 
+          component={AdminScreen}
+          options={{ headerShown: false, title: 'Admin' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
